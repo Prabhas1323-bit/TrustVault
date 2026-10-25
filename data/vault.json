@@ -1,0 +1,230 @@
+{
+  "users": [
+    {
+      "id": "user-admin-01",
+      "email": "admin@trustvault.io",
+      "name": "Chief Security Officer",
+      "role": "admin",
+      "passwordHash": "db6ab65ebe616b3eada7780ac2465ca1476b8e84020eb8453093267ad12d633bfb81db40e9ea3bed83969f3e47c611782446c0df1754bbad28720309b4155d7b",
+      "salt": "3148d1b101af8ebc4b844b790a5d748a",
+      "isActive": true,
+      "createdAt": "2026-09-25T07:25:04.891Z"
+    },
+    {
+      "id": "user-alice-02",
+      "email": "alice@trustvault.io",
+      "name": "Alice Henderson (Legal & M&A)",
+      "role": "owner",
+      "passwordHash": "1b0d766cd4cef7b663c3c5fc52445f16831a4c01ecf9f1cb04ca6a204890bf988be8903d4afd08ddd50f4095147de914097c8fc03f1ada2e13c36666ed7095eb",
+      "salt": "e767c51c922f8d3d692df8f1f4b4cf00",
+      "isActive": true,
+      "createdAt": "2026-09-30T07:25:04.928Z"
+    },
+    {
+      "id": "user-bob-03",
+      "email": "bob@trustvault.io",
+      "name": "Bob Martinez (Finance Controller)",
+      "role": "owner",
+      "passwordHash": "b9a01dab1cde250a619cac819e4be34732e2b0dfdc61e627c81f43667fcdab0b923c51e1a3883000949be10d9184699846ddb1c1568c48e20fc51934704dce16",
+      "salt": "0743d6d4809bcca7004c02b96b440704",
+      "isActive": true,
+      "createdAt": "2026-10-05T07:25:04.963Z"
+    },
+    {
+      "id": "user-charlie-04",
+      "email": "charlie@trustvault.io",
+      "name": "Charlie Wu (External Auditor)",
+      "role": "viewer",
+      "passwordHash": "b3fa97fbe7b35178af3cba9680c22b1b6adb0e6ebe780b89782a2807bf1f4a1ab204c82e08fb4b29e97a0dc43612820aaf8bce95dcb810d6be47c0934f8613f4",
+      "salt": "fb464254fb7ff4c13cd98ba32699746b",
+      "isActive": true,
+      "createdAt": "2026-10-10T07:25:05.001Z"
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc-003",
+      "title": "SOC2 Type II Cloud Infrastructure Audit",
+      "originalFilename": "SOC2_Type_II_TrustVault_2026.pdf",
+      "storedFilename": "seed_soc2_compliance_report.pdf",
+      "fileSize": 89400,
+      "mimeType": "application/pdf",
+      "category": "Work",
+      "description": "Third-party independent security assessment covering availability, integrity, and confidentiality.",
+      "ownerId": "user-alice-02",
+      "createdAt": "2026-10-23T07:25:05.001Z",
+      "updatedAt": "2026-10-23T07:25:05.001Z"
+    },
+    {
+      "id": "doc-002",
+      "title": "Q3 2026 Consolidated Financial Audit",
+      "originalFilename": "Q3_2026_Financial_Audit_Ledger.xlsx",
+      "storedFilename": "seed_q3_financial_audit.xlsx",
+      "fileSize": 124500,
+      "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "category": "Finance",
+      "description": "Audited trial balance, P&L, balance sheet, and tax provisioning notes.",
+      "ownerId": "user-bob-03",
+      "createdAt": "2026-10-21T07:25:05.001Z",
+      "updatedAt": "2026-10-21T07:25:05.001Z"
+    },
+    {
+      "id": "doc-001",
+      "title": "Acquisition NDA & Non-Compete Agreement",
+      "originalFilename": "Acquisition_NDA_2026_Final.pdf",
+      "storedFilename": "seed_ma_agreement_v3.pdf",
+      "fileSize": 48200,
+      "mimeType": "application/pdf",
+      "category": "Legal",
+      "description": "Mutual non-disclosure and restrictive covenant deed regarding project Horizon.",
+      "ownerId": "user-alice-02",
+      "createdAt": "2026-10-18T07:25:05.001Z",
+      "updatedAt": "2026-10-20T07:25:05.001Z"
+    }
+  ],
+  "permissions": [
+    {
+      "id": "perm-001",
+      "documentId": "doc-001",
+      "userId": "user-charlie-04",
+      "permissionLevel": "VIEW",
+      "grantedById": "user-alice-02",
+      "grantedAt": "2026-10-19T07:25:05.001Z"
+    },
+    {
+      "id": "perm-002",
+      "documentId": "doc-001",
+      "userId": "user-bob-03",
+      "permissionLevel": "EDIT",
+      "grantedById": "user-alice-02",
+      "grantedAt": "2026-10-20T07:25:05.001Z"
+    },
+    {
+      "id": "perm-003",
+      "documentId": "doc-002",
+      "userId": "user-charlie-04",
+      "permissionLevel": "VIEW",
+      "grantedById": "user-bob-03",
+      "grantedAt": "2026-10-22T07:25:05.001Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "audit-1792913246488-9782",
+      "timestamp": "2026-10-25T07:27:26.488Z",
+      "actorId": "user-admin-01",
+      "actorEmail": "admin@trustvault.io",
+      "action": "LOGIN_SUCCESS",
+      "resourceType": "AUTH",
+      "resourceId": "user-admin-01",
+      "status": "SUCCESS",
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.8059.12 Safari/537.36",
+      "details": "Authenticated as role: admin"
+    },
+    {
+      "id": "audit-1792913215302-8781",
+      "timestamp": "2026-10-25T07:26:55.302Z",
+      "actorId": "user-alice-02",
+      "actorEmail": "alice@trustvault.io",
+      "action": "LOGIN_SUCCESS",
+      "resourceType": "AUTH",
+      "resourceId": "user-alice-02",
+      "status": "SUCCESS",
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.8059.12 Safari/537.36",
+      "details": "Authenticated as role: owner"
+    },
+    {
+      "id": "audit-1792913210692-9262",
+      "timestamp": "2026-10-25T07:26:50.692Z",
+      "actorId": "user-admin-01",
+      "actorEmail": "admin@trustvault.io",
+      "action": "LOGIN_SUCCESS",
+      "resourceType": "AUTH",
+      "resourceId": "user-admin-01",
+      "status": "SUCCESS",
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.8059.12 Safari/537.36",
+      "details": "Authenticated as role: admin"
+    },
+    {
+      "id": "audit-1792913175572-9992",
+      "timestamp": "2026-10-25T07:26:15.572Z",
+      "actorId": "user-admin-01",
+      "actorEmail": "admin@trustvault.io",
+      "action": "LOGIN_SUCCESS",
+      "resourceType": "AUTH",
+      "resourceId": "user-admin-01",
+      "status": "SUCCESS",
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.8059.12 Safari/537.36",
+      "details": "Authenticated as role: admin"
+    },
+    {
+      "id": "audit-1792913145355-5632",
+      "timestamp": "2026-10-25T07:25:45.355Z",
+      "actorId": "user-admin-01",
+      "actorEmail": "admin@trustvault.io",
+      "action": "LOGIN_SUCCESS",
+      "resourceType": "AUTH",
+      "resourceId": "user-admin-01",
+      "status": "SUCCESS",
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.8059.12 Safari/537.36",
+      "details": "Authenticated as role: admin"
+    },
+    {
+      "id": "audit-001",
+      "timestamp": "2026-10-18T07:25:05.001Z",
+      "actorId": "user-alice-02",
+      "actorEmail": "alice@trustvault.io",
+      "action": "DOCUMENT_UPLOAD",
+      "resourceType": "DOCUMENT",
+      "resourceId": "doc-001",
+      "status": "SUCCESS",
+      "ipAddress": "192.168.1.42",
+      "userAgent": "Mozilla/5.0 (Macintosh)",
+      "details": "Uploaded Acquisition_NDA_2026_Final.pdf (48.2 KB)"
+    },
+    {
+      "id": "audit-002",
+      "timestamp": "2026-10-19T07:25:05.001Z",
+      "actorId": "user-alice-02",
+      "actorEmail": "alice@trustvault.io",
+      "action": "PERMISSION_GRANT",
+      "resourceType": "PERMISSION",
+      "resourceId": "doc-001",
+      "status": "SUCCESS",
+      "ipAddress": "192.168.1.42",
+      "userAgent": "Mozilla/5.0 (Macintosh)",
+      "details": "Granted VIEW permission to charlie@trustvault.io"
+    },
+    {
+      "id": "audit-003",
+      "timestamp": "2026-10-22T07:25:05.001Z",
+      "actorId": "unknown",
+      "actorEmail": "intruder@unknown.net",
+      "action": "LOGIN_FAILURE",
+      "resourceType": "AUTH",
+      "resourceId": "none",
+      "status": "FAILED",
+      "ipAddress": "203.0.113.195",
+      "userAgent": "Python-requests/2.28",
+      "details": "Failed authentication attempt with bad credentials"
+    },
+    {
+      "id": "audit-004",
+      "timestamp": "2026-10-24T07:25:05.001Z",
+      "actorId": "user-charlie-04",
+      "actorEmail": "charlie@trustvault.io",
+      "action": "DOCUMENT_DOWNLOAD",
+      "resourceType": "DOCUMENT",
+      "resourceId": "doc-001",
+      "status": "SUCCESS",
+      "ipAddress": "198.51.100.12",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+      "details": "Authorized download of Acquisition_NDA_2026_Final.pdf under VIEW grant"
+    }
+  ]
+}
